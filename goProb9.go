@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func z_next(z float64, x float64) float64{
@@ -19,5 +20,5 @@ func main() {
 
 	fmt.Printf("The square root of %f is %f \n", x, z)
 	
-	fmt.Printf("The math.sqrd Calculation is %f", Math.sqrd);
+	fmt.Printf("The math.sqrd Calculation is %12.8f", math.Sqrt);
 }
