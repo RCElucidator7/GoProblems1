@@ -20,5 +20,5 @@ func main() {
 
 	fmt.Printf("The square root of %f is %f \n", x, z)
 	
-	fmt.Printf("The math.sqrd Calculation is %12.8f", math.Sqrt);
+	fmt.Printf("The math.Sqrt Calculation is %f", math.Sqrt(x));
 }

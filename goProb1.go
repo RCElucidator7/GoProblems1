@@ -1,7 +1,8 @@
+// this is needed for excution of commands
 package main
 
 import "fmt"
 
 func main() {
-	fmt.Println("こんにちは世界")
+	fmt.Println("こんにちは世界!")
 }
