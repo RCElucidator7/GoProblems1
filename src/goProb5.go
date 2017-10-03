@@ -6,14 +6,14 @@ import(
 )
 
 //this generates random number between given range
-func xrand(min, max int) int {
+func rando(min, max int) int {
     //Uses time to get a random number as it guarentees a random number every time
     rand.Seed(time.Now().Unix())
     return rand.Intn(max - min) + min
 }
 
 func main() {
-    myrand := xrand(1, 100)
+    myrand := rando(1, 100)
     guessTaken := 0
     var guess int
     var lastGuess int = 0
