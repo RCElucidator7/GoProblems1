@@ -18,7 +18,7 @@ func main() {
 	fmt.Println(pall(input))
 }
 
-//Pallindrom function that check if the string entered is/is not a pallindroms
+//Palindrom function that check if the string entered is/is not a palindroms
 
 func pall(s string) string {
 
