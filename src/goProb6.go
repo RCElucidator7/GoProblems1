@@ -1,3 +1,5 @@
+//Ryan Conway - G00332826
+
 package main
 import (
 	"fmt"
@@ -12,8 +14,10 @@ func main() {
 		16,98,7,1,
 	}
 
+	//Loops through the array and prints each number
 	fmt.Printf("This is the array of numbers: %v \n\n", x)
 
+	//Loops through the array comparing each number til the largest is found
   	for _,v:=range x {
 		if v>temp {
     		fmt.Println(v,">",temp)
@@ -26,6 +30,7 @@ func main() {
 
 	fmt.Println("The largest number is ", large)
 
+	//Loops through the array comparing each number til the smallest is found
 	for _,v:=range x {
 		if v>temp {
 			fmt.Println(v,">",temp)

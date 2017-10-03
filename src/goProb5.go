@@ -1,3 +1,5 @@
+//Ryan Conway - G00332826
+
 package main
 import(
     "fmt"
