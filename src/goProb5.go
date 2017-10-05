@@ -29,22 +29,27 @@ func main() {
         //Flushes the buffer
         fmt.Scanf("%d")
         guessTaken++
-        //Checks if the user inputs the same number as they last entered
-        if lastGuess == guess {
-            fmt.Println("You cannot guess the same number!")
-            guessTaken--
+        //If statement checks to see if the user input a number between 1 and 100
+        if (guess >= 1 && guess <= 100){
+            //Checks if the user inputs the same number as they last entered
+            if lastGuess == guess {
+                fmt.Println("You cannot guess the same number!")
+                guessTaken--
+            }
+            if guess < myrand {
+                fmt.Println("Your guess is too low.")
+            }
+            if guess > myrand {
+                fmt.Println("Your guess is too high.")
+            }
+            if guess == myrand {
+                break
+            }
+            lastGuess = guess
+        } else {
+            fmt.Println("You must enter a number between 1 and 100");
         }
-        if guess < myrand {
-            fmt.Println("Your guess is too low.")
-        }
-        if guess > myrand {
-            fmt.Println("Your guess is too high.")
-        }
-        if guess == myrand {
-            break
-        }
-        lastGuess = guess
-    }
+    } 
     if guess == myrand {
         fmt.Printf("You guessed my number in %d tries\n", guessTaken)
     } else {
