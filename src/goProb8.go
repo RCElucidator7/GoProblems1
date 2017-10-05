@@ -43,13 +43,42 @@ func MergeSort(s []int) []int {
 	return Merge(left, right)
 }
 
+// Adapted from https://play.golang.org/p/g3QTWcy9D-
+func mergeArray(s1, s2 []int) []int {
+
+	unique := make(map[int]struct{})
+
+	for _, v := range s1 {
+		unique[v] = struct{}{}
+	}
+
+	for _, v := range s2 {
+		unique[v] = struct{}{} 
+	}
+
+	final := make([]int, len(unique)) 
+	i := 0
+
+	for k := range unique {
+		final[i] = k
+		i++ 
+	}
+	return final
+}
+
 func main() {
 	
-	s := []int{
+	a := []int{
 		54,35,57,97,
 		23,13,31,74,
-		54,37,63,27,
+	}
+
+	s := []int{
+		59,37,63,27,
 		16,98,7,1,
 	}
-	fmt.Printf("%v\n%v\n", s, MergeSort(s))
+
+	merged := mergeArray(a, s)
+
+	fmt.Printf("Array No1: %v\nArray No2: %v\nMerged Array: %v\n", a, s, MergeSort(merged))
 }
